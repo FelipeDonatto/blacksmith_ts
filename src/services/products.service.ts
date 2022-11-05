@@ -6,6 +6,7 @@ export async function createProd(user: Product) {
   return { status: 201, data, error: null };
 }
 
-export async function placeholder() {
-  console.log();
+export async function getAll() {
+  const data = await userModel.getAll();
+  return { status: 200, data, error: null };
 }

@@ -10,6 +10,10 @@ export async function createProd(req: Request, res: Response) {
     ? res.status(status).json({ error })
     : res.status(status).json(data);
 }
-export async function name() {
-  console.log();
+export async function getAll(req: Request, res: Response) {
+  const { status, data, error } = await userService.getAll();
+
+  return error
+    ? res.status(status).json({ error })
+    : res.status(status).json(data);
 }
